@@ -40,3 +40,22 @@ If you are using Babel or EcmaScript6, you can consider the Object.assign method
 - component should not interact with one another directly, there should be a central dispatcher to manage the communication or data transfer
 - when using a dispatcher, always describe the transaction that is happening, not just the value
 - when there are communication between different components, use the namespace source:action:target (or current_component:action_type:target_component) to track where the changes are happening - do not create ghosts events (a situation where the component that is updating another component is unknown to the user)
+
+
+### ClassName
+- you will be passing className often to children component, so use a utility helper to help concatenate className
+```javascript
+
+function className(separator) {
+  var args = Array.prototype.slice.call(arguments, 1);
+  return args.join(separator);
+}
+```
+- long className? separate that component as a wrapper and wrap other children elements with it
+- 
+
+###Design Patterns
+- dispatcher
+- higher order components
+- stores
+- asynchronnous ajax call
