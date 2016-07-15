@@ -11,6 +11,7 @@ A list of best practices that I have accumulated while using React.
 - since all the states will be stored in the root component, group them according to the *Model*
 - a *Model* can hold the following props:
 
+
 const expenseModel = {
   collection: [], // you will be working with collection all the time
   selected: 0, // index or ID of the selected item in the collection
@@ -29,6 +30,10 @@ const copy = JSON.parse(JSON.stringify(objName))
 If you are using Babel or EcmaScript6, you can consider the Object.assign method. Note that this will only create a shallow copy.
 
 
+###Lifecycle
+- show loading when mounting a component, and remove the loading state after it is mounted or Ajax call is successful
+- Ajax calls are triggered in the componentWillMount lifecycle
+- dispatcher will be registered/subscribed in the componentWillMount, and unregistered/unsubscribe in the componentWillUnmount
 
 
 ###Communication between events
