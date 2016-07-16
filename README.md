@@ -41,6 +41,34 @@ If you are using Babel or EcmaScript6, you can consider the Object.assign method
 - use atomic design pattern, e.g. split the components to atom, molecules, organisms, pages etc
 - atoms, molecules, organisms should not hold any states
 - single responsibility principle for components design
+- hide/show components
+
+There are a few ways of toggling components
+```javascript
+
+// Approach A: If/else statement
+{ ifConditionsIsMet ? <div>Show Component</div> : null }
+
+// Approach B: ClassName to hide/show
+<div className={ifConditionsIsMet ? 'someclassname is-visible' : 'someclassname'}>Show Component</div>
+
+// Approach C: New Component
+class Component extends React.Component {
+  render() {
+    const { visible:isVisible } = this.props;
+    return isVisible ? <div>Show Component</div> : null;
+  }
+}
+
+<Component visible={true}/>
+
+// Approach D: Props
+
+const Component = ({ visible }) => {
+  return visible ? <div>Show Component</div> : null;
+}
+```
+
 
 
 ###Communication between events
@@ -59,7 +87,6 @@ function className(separator) {
 }
 ```
 - long className? separate that component as a wrapper and wrap other children elements with it
-
 
 
 ###Design Patterns
