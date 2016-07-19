@@ -42,12 +42,37 @@ const copy = Object.assign({}, this.state);
 
 
 ###Lifecycle
-- there are several lifecyles in React
-- componentWillMount, componentDidMount, componentWillReceiveProps, componentDidUpdate, etc
-- show loading when mounting a component, and remove the loading state after it is mounted or Ajax call is successful
-- Ajax calls are triggered in the componentWillMount lifecycle
-- dispatcher will be registered/subscribed in the componentWillMount, and unregistered/unsubscribe in the componentWillUnmount
-- when using refs in React, you can only access it once it is mounted, call componentDidMount
+- components lifecycle and what you can do there
+#### componentWillMount
+- is called before a component is mounted (rendered)
+- trigger service call here and set the state here
+- bind dispatcher events here
+- trigger a loading state here (if necessary)
+- subscribe to pub/sub events
+#### render
+- parse the model to be rendered here
+- handle the props that is passed down from parent components here
+- if / else checking to target the view to be rendered
+#### componentDidMount
+- refs can be called here
+- remove loading state
+#### componentWillUnmount
+- unsubscribe to pub/sub events
+#### componentWillReceiveProps
+#### componentDidUpdate
+#### ajaxWillCall
+- set loading indicator
+- disable other actionable trigger that might trigger the same service call twice
+#### ajaxDidCall
+- remove loading indicator
+
+#### ajaxFail
+- allow users to retry 
+- render retry view
+#### ajaxSuccess
+- update the collection
+- enable back disabled components
+
 
 ###Component structure
 - split the component into small parts
