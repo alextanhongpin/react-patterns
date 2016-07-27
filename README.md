@@ -146,6 +146,15 @@ const Style = {
 ```
 
 
+### Higher-order-components (HOCs)
+There are several use cases for HOCs. To highlight a few:-
+
+- feature toggle (deciding if the components should be rendered or not)
+- placeholder (check the states to see if there are any collection, return a placeholder if there are none)
+- adding services in between
+- throttling events (useful for preventing multiple requests being submitted)
+- refresh service mechanism (?). If a service call fail, render a view to refresh the particular component.
+
 ###Design Patterns
 - dispatcher
 - higher order components (HOC)
