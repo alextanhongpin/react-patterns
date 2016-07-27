@@ -155,6 +155,22 @@ There are several use cases for HOCs. To highlight a few:-
 - throttling events (useful for preventing multiple requests being submitted)
 - refresh service mechanism (?). If a service call fail, render a view to refresh the particular component.
 
+
+### Props
+There are several useful props that can be passed down to components:-
+- placeholder: a placeholder text or component to be rendered for empty states
+- selected: selected state of components (highlights etc)
+- active: active state of component
+- disabled: disabled state of component (greyed out or not clickable)
+- value: default value
+- model: components should best hold only one model
+- events: onClick, or better a global event handler, etc
+- id: if necessary
+- ns: short for namespace, useful when using a dispatcher
+- dispatcher: for communication between components, or triggering service call
+- store: holds the service call, but will usually be placed in the root component
+
+
 ###Design Patterns
 - dispatcher
 - higher order components (HOC)
