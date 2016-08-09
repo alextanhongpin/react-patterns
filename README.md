@@ -155,6 +155,19 @@ There are several use cases for HOCs. To highlight a few:-
 - throttling events (useful for preventing multiple requests being submitted)
 - refresh service mechanism (?). If a service call fail, render a view to refresh the particular component.
 
+### Design patterns in component
+- state machine (handling conditionals by using factory design pattern)
+
+
+### Handling conditionals
+- in determining the styles
+- hide or show components
+- default values
+- for width/height, setting dimensions in px is better than using 'large', 'small', 'medium'
+- for button, it's okay to use classes like 'btn--small', 'btn--large'
+
+
+
 
 ### Props
 There are several useful props that can be passed down to components:-
