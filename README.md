@@ -154,7 +154,7 @@ There are several use cases for HOCs. To highlight a few:-
 - adding services in between
 - throttling events (useful for preventing multiple requests being submitted)
 - refresh service mechanism (?). If a service call fail, render a view to refresh the particular component.
-
+- adding tooltips 
 
 
 
@@ -184,11 +184,11 @@ There are several useful props that can be passed down to components:-
 
 
 ###Design Patterns
-- dispatcher
-- higher order components (HOC) a.k.a. decorators
+- dispatcher (observer pattern implementation, used to dispatch Actions in this case)
+- higher order components (HOC) a.k.a. decorators (used to add functionality/additional properties to a component)
 - stores
 - asynchronnous ajax call
-- state machine
-- factory
+- state machine (when deciding which template to render - such as empty placeholders when there are no data or list when there's a collection present)
+- factory (when there are multiple instances of a component - eg. Button, ButtonLarge, ButtonDark should be created from a ButtonFactory)
 - template
 - facade
