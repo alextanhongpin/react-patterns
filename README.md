@@ -155,8 +155,7 @@ There are several use cases for HOCs. To highlight a few:-
 - throttling events (useful for preventing multiple requests being submitted)
 - refresh service mechanism (?). If a service call fail, render a view to refresh the particular component.
 
-### Design patterns in component
-- state machine (handling conditionals by using factory design pattern)
+
 
 
 ### Handling conditionals
@@ -186,6 +185,10 @@ There are several useful props that can be passed down to components:-
 
 ###Design Patterns
 - dispatcher
-- higher order components (HOC)
+- higher order components (HOC) a.k.a. decorators
 - stores
 - asynchronnous ajax call
+- state machine
+- factory
+- template
+- facade
